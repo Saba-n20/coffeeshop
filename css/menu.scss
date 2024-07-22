@@ -1,0 +1,95 @@
+@use './partials/global' as *;
+@use './partials/variables';
+@use './partials/mixins';
+
+.hero {
+  background-image: url(../asset/coffee-circle.jpg);
+  width: 100vw;
+  height: 43.75rem;
+  background-position: center;
+  background-size: cover;
+  @include mixins.flex-center-column();
+  position: relative;
+
+  &__title {
+    position: relative;
+    width: 18.75rem;
+    height: 12.5rem;
+    background-color: $graphite;
+    color: $white;
+    font-size: 3rem;
+    @include mixins-flex-center();
+  }
+
+  &__title-wrapper{
+      width: 18.75rem;
+      height: 12.5rem;
+      @include mixins.flex-center();
+      border: 0.31rem solid $nitro-blue;
+      position: absolute;
+      top: -1.25rem;
+      left: -1.25rem;
+    }
+
+
+  &__subnav-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &__subnav-list {
+    width: 100%;
+    height: 3rem;
+    background-color: $graphite;
+    @include mixins-flex-center-row();
+  }
+
+  &__subnav-item {
+    text-decoration: none;
+    text-align: center;
+    border-left: 0.2rem solid $nitro-blue;
+    padding: 0.2rem 1.25rem;
+  }
+
+  &__subnav-link {
+    text-decoration: none;
+    color: $white;
+  }
+}
+
+.menu {
+  font-style: italic;
+  text-align: center;
+  margin: auto;
+
+  &__wrapper {
+    padding: 1.25rem;
+  }
+  &__title {
+    padding: 1.25rem;
+  }
+
+  &__title-note {
+    width: 40%;
+    text-align: center;
+    display: inline-block;
+    padding: 1.25rem;
+  }
+
+  &__title-price {
+    color: $nitro-blue;
+    text-align: center;
+  }
+}
+#hotdrinks,
+#Pastries {
+  background-color: $nitro-pink;
+}
+
+#colddrinks {
+  background-color: $light-gray;
+}

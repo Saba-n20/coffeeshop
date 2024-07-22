@@ -1,0 +1,236 @@
+@use './partials/global' as *;
+@use './partials/variables';
+@use '../css/partials/mixins';
+.hero {
+  @include mixins.flex-center-row();
+  background-color: $nitro-pink;
+  width: 100%;
+  gap: 32rem;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 25%;
+    margin: 1.25rem;
+  }
+
+  &__notes {
+    display: flex;
+    flex-wrap: wrap;
+    color: $graphite;
+    padding-bottom: 1.25rem;
+    // font-weight: bold;
+    
+  }
+
+  &__container {
+    text-align: right;
+    align-items: flex-start;
+  }
+
+  &__pic {
+    width: 17.5rem;
+  }
+  &__btn {
+    &::before {
+      content: 'SHOP NOW';
+    }
+  }
+}
+
+.main {
+  background-color: $light-gray;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.product {
+  @include mixins.flex-center-column();
+  background-color: $light-gray;
+  padding: 3.125rem 0;
+
+  &__cards {
+    display: flex;
+  }
+  &__img {
+    height: 17.5rem;
+    object-fit: contain;
+    background-color: $white;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    justify-content: space-between;
+    height: 27.5rem;
+    width: 20.62rem;
+    margin: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.312rem 0.562rem -0.062rem rgba(0, 0, 0, 0.25);
+  }
+  &__item-container {
+    background-color: $nitro-pink;
+    border-radius: 0 0 0.625rem 0.625rem;
+    padding: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__item-number {
+    color: $gray;
+  }
+  &__item-price {
+    color: $nitro-blue;
+    font-weight: bold;
+  }
+  &__item-btn {
+    margin-top: 3rem;
+    &::before {
+      content: 'VIEW ALL';
+    }
+  }
+}
+
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.different {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 1.25rem;
+  width: 100%;
+  padding: 4rem 0;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 25%;
+    gap: 1.25rem;
+  }
+  &__title {
+    font-size: 3.43rem;
+    font-weight: regular 400;
+    color: $graphite;
+  }
+
+  &__pics {
+    background-image: url(../asset/coldbrewbackground.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25rem;
+    height: 25rem;
+    @include mixins-flex-center();
+    position: relative;
+    
+  }
+
+  &__pic {
+    height: 17.5rem;
+    cursor: pointer;
+    &:hover{
+    animation: spin 2s linear infinite;
+    }
+  }
+  
+  &__pic-container {
+    width: 25rem;
+    height: 25rem;
+    @include mixins.flex-center();
+    border: 0.31rem solid $nitro-blue;
+    position: absolute;
+    right: 1.5rem;
+    top: -1.5rem;
+  }
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__icon {
+    width: 3.125rem;
+  }
+  &__btn {
+    &::before {
+      content: 'LEARN MORE';
+    }
+  }
+}
+
+@keyframes flash {
+  from{
+    background-color: $graphite;
+  }
+
+  to{
+    background-color: $nitro-blue;
+  }
+}
+
+.discount {
+  margin: 1.25rem auto;
+  @include mixins.flex-center();
+  transition: flash 2.5s infinite;
+   
+  &__note {
+    font-size: 2.81rem;
+    font-weight: bold 700;
+    width: 90%;
+    background-color: $graphite;
+    color: $white;
+    text-align: center;
+    animation: flash 2.5s infinite;
+    
+    
+  }
+}
+
+.footer {
+  background-color: $nitro-pink;
+  text-align: left;
+  padding: 4rem 0;
+  margin-top: 5rem;
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__background-right {
+    width: 7.5rem;
+    opacity: 25%;
+    position: absolute;
+    right: -2.25rem;
+    bottom: 1rem;
+  }
+
+  &__background-left {
+    width: 7.5rem;
+    opacity: 25%;
+    position: absolute;
+    left: -1.75rem;
+    top: 1.25rem;
+  }
+}
+
+#Facebook-Icon,
+#Instagram-Icon,
+#Yelp-Icon {
+  width: 3.125rem;
+}

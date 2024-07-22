@@ -1,0 +1,213 @@
+/* ELEMENTS */
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+header {
+  background-color: #fff0ed;
+}
+
+h1,
+h2 {
+  font-size: 3.75rem;
+  font-weight: 300;
+  font-style: normal;
+  color: #393939;
+  margin: 0;
+}
+
+h3,
+nav {
+  margin: 0;
+  font-size: 2.06rem;
+  font-weight: 300;
+  color: #393939;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 400;
+  color: inherit;
+  padding: 0;
+}
+
+p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #393939;
+}
+
+.btn {
+  background-color: #5bacc3;
+  color: #fff;
+  border: none;
+  width: 11.25rem;
+  padding: 1.25rem;
+  height: 1.875rem;
+  display: flex;
+  justify-content: center;
+  font-size: 1.31rem;
+  font-weight: regular 400;
+  position: relative;
+  cursor: pointer;
+}
+.btn::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  border: 0.093rem solid black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -0.5rem;
+  left: -0.5rem;
+}
+.btn:hover::before {
+  border: 0.093rem solid GREY;
+}
+.btn:active::before {
+  transform: translate(0.5rem, 0.5rem);
+}
+
+li {
+  display: inline-block;
+  text-align: center;
+}
+
+ul {
+  padding: 0;
+}
+
+.header {
+  background-color: #fff0ed;
+  padding: 1.5rem 0 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.header__title-link {
+  color: #393939;
+  font-size: 2.5rem;
+}
+.header__nav-list {
+  display: flex;
+  list-style-type: none;
+  gap: 1rem;
+  margin-right: 1.25rem;
+}
+.header__nav-item-link {
+  color: #393939;
+  font-size: 1.5rem;
+  font-weight: light 300;
+}
+
+#header-nav-link-shop {
+  color: #5bacc3;
+}
+
+.hero {
+  background-image: url(../asset/coffee-circle.jpg);
+  width: 100vw;
+  height: 43.75rem;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero__title {
+  position: relative;
+  width: 18.75rem;
+  height: 12.5rem;
+  background-color: #393939;
+  color: #fff;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero__title-wrapper {
+  width: 18.75rem;
+  height: 12.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.31rem solid #5bacc3;
+  position: absolute;
+  top: -1.25rem;
+  left: -1.25rem;
+}
+.hero__subnav-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.hero__subnav-list {
+  width: 100%;
+  height: 3rem;
+  background-color: #393939;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.hero__subnav-item {
+  text-decoration: none;
+  text-align: center;
+  border-left: 0.2rem solid #5bacc3;
+  padding: 0.2rem 1.25rem;
+}
+.hero__subnav-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu {
+  font-style: italic;
+  text-align: center;
+  margin: auto;
+}
+.menu__wrapper {
+  padding: 1.25rem;
+}
+.menu__title {
+  padding: 1.25rem;
+}
+.menu__title-note {
+  width: 40%;
+  text-align: center;
+  display: inline-block;
+  padding: 1.25rem;
+}
+.menu__title-price {
+  color: #5bacc3;
+  text-align: center;
+}
+
+#hotdrinks,
+#Pastries {
+  background-color: #fff0ed;
+}
+
+#colddrinks {
+  background-color: #f7f7f7;
+}/*# sourceMappingURL=menu.css.map */
